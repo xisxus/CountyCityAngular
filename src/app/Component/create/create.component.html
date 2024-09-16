@@ -48,7 +48,8 @@
                             <th>CityName</th>
                             <th>Lat</th>
                             <th>Lon</th>
-                            <th>Action</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
 
                         </tr>
                     </thead>
@@ -59,6 +60,9 @@
                             <td>{{ciy.lan}}</td>
                             <td>
                                 <button (click)="onedi(ciy)" class="btn btn-primary">Edit</button>
+                               
+                            </td>
+                            <td>
                                 <button (click)="ondeli(ciy)" class="btn btn-danger">Delete</button>
                             </td>
                         </tr>
