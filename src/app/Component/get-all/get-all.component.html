@@ -1,0 +1,44 @@
+<p>get-all works!</p>
+<!-- {{getc|json}} -->
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>CounName</th>
+            <th>Iso3</th>
+            <th>Iso2</th>
+            <th>cities</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let cou of getc">
+            <td>{{cou.country.name}}</td>
+            <td>{{cou.country.isO3}}</td>
+            <td>{{cou.country.isO2}}</td>
+            <td>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>CityName</th>
+                            <th>Lat</th>
+                            <th>Lon</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let city of cou.cities">
+                            <td>{{city.name}}</td>
+                            <td>{{city.lat}}</td>
+                            <td>{{city.lan}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td>
+                <button class="btn btn-secondary" routerLink="/up/{{cou.country.id}}">Edit</button>
+                <button class="btn btn-danger" (click)="delte(cou.country.id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

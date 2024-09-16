@@ -1,0 +1,4 @@
+[ { "$id": "1", "country": 
+{ "$id": "2", "id": 1, "name": "ttt", "isO3": "123", "isO2": "145", "cities": null },
+ "cities": [ { "$id": "3", "id": 1, "name": "bvc", "lat": 122, "lan": 122, "countryId": 1 }
+ , { "$id": "4", "id": 2, "name": "fjhjf", "lat": 455, "lan": 542, "countryId": 1 } ] },
