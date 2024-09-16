@@ -7,11 +7,11 @@
   
   .top-button {
     position: absolute;
-    top: 77%; /* Adjust this value to place the button higher or lower */
+    top: 76%; /* Adjust this value to place the button higher or lower */
     left: 50%;
     transform: translateX(-50%);
     z-index: 1001101210120; /* Ensure the button is above the image */
-    padding: 12px 35px;
+    padding: 13px 35px;
     background-color: #20e420;
     color: white;
     border: none;
