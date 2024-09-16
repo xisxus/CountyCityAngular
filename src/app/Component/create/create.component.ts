@@ -15,6 +15,7 @@ export class CreateComponent {
 
   http = inject(HttpClient)
   router = inject(Router)
+  
   cou ={
     country : {
       id: 0,
@@ -67,8 +68,6 @@ export class CreateComponent {
   }
 
   ondeli(obj: any){
-    
-    
     this.cou.cities = this.cou.cities.filter((q) => q !== obj)
   }
 
