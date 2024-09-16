@@ -1,9 +1,9 @@
-<nav class="acb">
-  <ul class="navbar-nav flex-row bg-black text-white ">
+<!-- app.component.html -->
+<nav *ngIf="showNav" class="acb">
+  <ul class="navbar-nav flex-row bg-black text-white">
     <li class="nav-item"><a class="nav-link m-2" routerLink="">Home</a></li>
     <li class="nav-item"><a class="nav-link m-2" routerLink="/ge">List</a></li>
     <li class="nav-item"><a class="nav-link m-2" routerLink="/cr">Create</a></li>
-    
   </ul>
 </nav>
 
