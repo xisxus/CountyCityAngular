@@ -122,8 +122,6 @@ export class EditComponent implements OnInit {
   }
 
   ondeli(obj: any){
-    
-    
     this.cou.cities = this.cou.cities.filter((q) => q !== obj)
   }
 
