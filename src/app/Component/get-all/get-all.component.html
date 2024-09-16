@@ -1,13 +1,14 @@
-<p>get-all works!</p>
+
 <!-- {{getc|json}} -->
 
-<table class="table">
+<table class="table table-bordered">
     <thead>
         <tr>
             <th>CounName</th>
             <th>Iso3</th>
             <th>Iso2</th>
             <th>cities</th>
+            <th>Action</th>
             <th>Action</th>
         </tr>
     </thead>
@@ -17,7 +18,7 @@
             <td>{{cou.country.isO3}}</td>
             <td>{{cou.country.isO2}}</td>
             <td>
-                <table class="table">
+                <table class="table table-bordered">
                     <thead>
                         <tr>
                             <th>CityName</th>
@@ -36,7 +37,10 @@
                 </table>
             </td>
             <td>
-                <button class="btn btn-secondary" routerLink="/up/{{cou.country.id}}">Edit</button>
+                <button class="btn btn-secondary" routerLink="/up/{{cou.country.id}}">Edit</button> 
+               
+            </td>
+            <td>
                 <button class="btn btn-danger" (click)="delte(cou.country.id)">Delete</button>
             </td>
         </tr>

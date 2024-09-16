@@ -2,66 +2,78 @@
 
 <div class="container">
     <div class="row">
-        <h2>Country Info</h2>
-        <div class="col-md-4">
-            <label for="">Name</label>
-            <input type="text" name="name" id="" [(ngModel)]="cou.country.name">
+        <div class="col-md-3">
+            
+            <h2>Country Info</h2>
+            <div class="md-4">
+                <label class="form-label" for="">Name</label>
+                <input class="form-control" type="text" name="name" id="" [(ngModel)]="cou.country.name">
+            </div>
+            <div class="md-4">
+                <label class="form-label" for="">isO2</label>
+                <input class="form-control" type="text" name="isO2" id="" [(ngModel)]="cou.country.isO2">
+            </div>
+            <div class="md-4">
+                <label class="form-label" for="">isO3</label>
+                <input class="form-control" type="text" name="isO3" id="" [(ngModel)]="cou.country.isO3">
+            </div>
+       
         </div>
-        <div class="col-md-4">
-            <label for="">isO2</label>
-            <input type="text" name="isO2" id="" [(ngModel)]="cou.country.isO2">
+        <div class="col-md-3">
+            <h2>City Info</h2>
+            <div class="md-3">
+                <label class="form-label" for="">Name</label>
+                <input class="form-control" type="text" name="name" id="" [(ngModel)]="city.name">
+            </div>
+            <div class="md-3">
+                <label class="form-label" for="">lat</label>
+                <input class="form-control" type="number" name="lat" id="" [(ngModel)]="city.lat">
+            </div>
+            <div class="md-3">
+                <label class="form-label" for="">lan</label>
+                <input class="form-control" type="number" name="lan" id="" [(ngModel)]="city.lan">
+            </div>
+            <div class="mt-3">
+                <button class="btn btn-primary" (click)="addcity()">AddCity</button>
+            </div>
         </div>
-        <div class="col-md-4">
-            <label for="">isO3</label>
-            <input type="text" name="isO3" id="" [(ngModel)]="cou.country.isO3">
+        <div class="col-md-6">
+
+            <div class="row" *ngIf="cou.cities.length>0">
+                <h2>City List</h2>
+
+                <table class="table table-bordered mt-4">
+                    <thead>
+                        <tr>
+                            <th>CityName</th>
+                            <th>Lat</th>
+                            <th>Lon</th>
+                            <th>Action</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let ciy of cou.cities">
+                            <td>{{ciy.name}}</td>
+                            <td>{{ciy.lat}}</td>
+                            <td>{{ciy.lan}}</td>
+                            <td>
+                                <button (click)="onedi(ciy)" class="btn btn-primary">Edit</button>
+                                <button (click)="ondeli(ciy)" class="btn btn-danger">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-    <div class="row">
-        <h2>City Info</h2>
-        <div class="col-md-3">
-            <label for="">Name</label>
-            <input type="text" name="name" id="" [(ngModel)]="city.name">
-        </div>
-        <div class="col-md-3">
-            <label for="">lat</label>
-            <input type="number" name="lat" id="" [(ngModel)]="city.lat">
-        </div>
-        <div class="col-md-3">
-            <label for="">lan</label>
-            <input type="number" name="lan" id="" [(ngModel)]="city.lan">
-        </div>
-        <div class="col-md-3">
-           <button class="btn btn-primary" (click)="addcity()">AddCity</button>
-        </div>
-    </div>
-    <div class="row" *ngIf="cou.cities.length>0">
-        <table class="table">
-            <thead>
-                <tr>
-                    <th>CityName</th>
-                    <th>Lat</th>
-                    <th>Lon</th>
-                    <th>Action</th>
-                    
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let ciy of cou.cities">
-                    <td>{{ciy.name}}</td>
-                    <td>{{ciy.lat}}</td>
-                    <td>{{ciy.lan}}</td>
-                    <td>
-                        <button (click)="onedi(ciy)" class="btn btn-primary">Edit</button>
-                        <button (click)="ondeli(ciy)" class="btn btn-danger">Delete</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-    <div class="row">
+
+
+
+    <div class="row mt-2">
         <button class="btn btn-primary" (click)="addCounCity()">Add Country City</button>
     </div>
-    
+
 </div>
 
 <!-- {{cou|json}} -->
